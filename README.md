@@ -6,9 +6,9 @@
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Ayisha Saniya M S - SCMS College Of Engineering And Technology,Karukutty
+- Member 2: Drushya Jolly - SCMS College Of Engineering And Technology,Karukutty
+- Member 3: Gayathri Jayan - SCMS College Of Engineering And Technology,Karukutty
 
 ### Hosted Project Link
 [mention your project hosted project link here]
