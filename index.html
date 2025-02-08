@@ -26,21 +26,23 @@
         </select>
 
         <h2>Enter Your Budget</h2>
-        <input type="number" id="budget" placeholder="Enter Budget">
+        <input type="number" id="budget" placeholder="Enter Budget" min="1">
 
         <h2>Select Your Trip Dates</h2>
-        <input type="date" id="start-date">
+        <input type="date" id="start-date" onchange="setMinEndDate()">
         <input type="date" id="end-date">
 
         <button onclick="generateItinerary()">Generate Itinerary</button>
+        <p class="loading" id="loading-text">Generating your itinerary...</p>
     </div>
 
     <div id="itinerary-view">
         <h2>Your AI-Generated Itinerary</h2>
         <div id="itinerary-summary"></div>
+        <h3>Suggested Clothing</h3>
+        <div id="clothing-suggestion"></div>
+        <button onclick="exportItinerary()">Export as PDF</button>
     </div>
-
-    <button onclick="exportItinerary()">Export as PDF</button>
 
     <script src="script.js"></script>
 </body>
