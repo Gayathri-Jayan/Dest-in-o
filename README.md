@@ -2,7 +2,7 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: InnovateHER
 
 
 ### Team Members
@@ -14,7 +14,7 @@
 [mention your project hosted project link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+The AI Travel Itinerary Planner is an interactive web application that helps users create customized travel itineraries based on their chosen destination, travel dates, and mood. It suggests popular attractions and mood-based activities to enhance the travel experience, providing a personalized and well-rounded plan for any traveler.
 
 ### The Problem statement
 [What ridiculous problem are you solving?]
