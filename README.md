@@ -43,7 +43,12 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
+![Screenshot (200)](https://github.com/user-attachments/assets/6c4a5b15-cfb7-4e43-8989-f865a57549e3)
+
 ![image](https://github.com/user-attachments/assets/be48699c-80b2-4e63-b2d9-4f2806e548b4)
+![Screenshot (201)](https://github.com/user-attachments/assets/c57b25f2-44ca-42d0-863b-41f955711eb9)
+
+![Uploading Screenshot (203).png…]()
 
 ![Screenshot1](Add screenshot 1 here with proper name)
 *Add caption explaining what this shows*
