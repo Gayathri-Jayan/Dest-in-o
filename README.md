@@ -1,4 +1,4 @@
-# DestINo 🎯
+# Dest-IN-o 🎯
 
 
 ## Basic Details
@@ -34,13 +34,18 @@ For Software:
 For Software:
 
 # Installation
-[commands]
+
+Clone the repository:
+  git clone https://github.com/Gayathri-Jayan/Dest-in-o
+
+Navigate to the project directory:
+  cd your-repo
 
 # Run
-[commands]
+Running the Project locally
+  Open the project folder.
+  Open the index.html file in a web browser.
 
-### Project Documentation
-For Software:
 
 # Screenshots (Add at least 3)
 ![Screenshot (199)](https://github.com/user-attachments/assets/f6bf45a1-fa0b-4c67-ae9e-2afcaf82bde5)
@@ -53,32 +58,18 @@ For Software:
 ![Screenshot (204)](https://github.com/user-attachments/assets/66bf1bc5-5494-4772-afbd-5305eaf7eb74)
 
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
 # Build Photos
-![Team](Add photo of your team here)
+![WhatsApp Image 2025-02-09 at 11 49 19_4c78978b](https://github.com/user-attachments/assets/4b68e9a3-36e0-46cb-8264-9967120fdd17)
 
 # Components:
 User Interface (UI): Main dashboard with dynamic background, displaying itineraries, attractions, accommodations, and food spots.
 Itinerary Generator: Customizes travel plans based on user inputs and provides recommendations.
 Accommodation & Food Recommendations: Lists hotels and eateries based on destination.
 
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
+https://github.com/user-attachments/assets/c32b456a-74a6-4d48-8edd-a07c3bdf55ee
 
 ## Team Contributions
 - Ayisha Saniya:  UI Design & Layout
