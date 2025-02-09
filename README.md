@@ -1,4 +1,4 @@
-# Dest-IN-o 🎯
+# DestINo 🎯
 
 
 ## Basic Details
@@ -14,7 +14,7 @@
 https://heartfelt-kulfi-6cbb16.netlify.app/
 
 ### Project Description
-Create the ultimate travel plan with our interactive app! Get personalized itineraries, discover top attractions, cozy accommodations, must-try food spots, and even dress recommendations based on the weather and activities at your destination. Your adventure, perfectly planned!
+The Travel Itinerary Planner is an interactive web application that helps users create customized travel itineraries based on their chosen destination, travel dates. It suggests popular attractions, accomodation and must try food spots to enhance the travel experience.
 
 ### The Problem statement
 Trip planning is time-consuming and overwhelming. Existing methods lack personalization, overlook hidden gems, and fail to adapt to travelers' moods and interests, leading to less fulfilling experiences.
