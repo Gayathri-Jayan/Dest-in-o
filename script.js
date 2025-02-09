@@ -1,126 +1,236 @@
-const clothingSuggestions = {
+ 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("destination").addEventListener("change", updateTheme);
+});
+
+// Theme & Backgrounds Based on Destination
+function updateTheme() {
+    const city = document.getElementById("destination").value;
+    const body = document.body;
+    const header = document.querySelector("header");
+
+    const cityThemes = {
+        "Paris": {
+            background: "url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFyaXN8ZW58MHx8MHx8fDA%3D')",
+            color: "#rgb(255 182 193 / 58%)"
+        },
+        "New York": {
+            background: "url('https://fullsuitcase.com/wp-content/uploads/2022/05/One-day-in-New-York-USA-NYC-day-trip-itinerary.jpg')",
+            color: "#rgb(16 29 31 / 59%)"
+        },
+        "Tokyo": {
+            background: "url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG9reW98ZW58MHx8MHx8fDA%3D')",
+            color: "#rgb(4 15 62 / 71%)"
+        },
+        "London": {
+            background: "url('https://www.lifeyet.com/wp-content/uploads/2023/01/Things-to-do-in-London.jpg')",
+            color: "#rgb(68 176 173 / 37%)"
+        },
+        "Rome": {
+            background: "url('https://images.unsplash.com/photo-1531572753322-ad063cecc140?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9tZXxlbnwwfHwwfHx8MA%3D%3D')",
+            color: "#9b6024b3"
+        },
+        "Sydney": {
+            background: "url('https://www.pelago.com/img/destinations/sydney/hero-image.jpg')",
+            color: "#rgb(0 191 255 / 31%)"
+        },
+        "Dubai": {
+            background: "url('https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_4:3,w_3840,g_auto/f_auto/q_auto/shutterstock_2414539851_ss_non-editorial_dcx0bm?_a=BAVARSAP0')",
+            color: "#rgb(218 83 32 / 17%)"
+        }
+    };
+
+    if (cityThemes[city]) {
+        body.style.backgroundImage = cityThemes[city].background;
+        body.style.backgroundSize = "cover";
+        body.style.backgroundPosition = "center";
+        body.style.backgroundAttachment = "fixed";
+        header.style.backgroundColor = cityThemes[city].color;
+    }
+}
+
+const destinationData = {
     "Paris": {
-        "spring": "Light jacket, jeans, comfortable shoes, sunglasses.",
-        "summer": "Light dress or shorts, T-shirt, sunscreen, comfortable shoes.",
-        "autumn": "Layered clothing, sweater, scarf, comfortable shoes.",
-        "winter": "Warm coat, boots, gloves, scarf."
+        activities: [
+            { name: "Eiffel Tower Visit", cost: 30 },
+            { name: "Louvre Museum", cost: 20 },
+            { name: "Seine River Cruise", cost: 50 }
+        ],
+        accommodations: [
+            { name: "Budget Hotel", costPerNight: 100 },
+            { name: "Mid-range Hotel", costPerNight: 200 },
+            { name: "Luxury Hotel", costPerNight: 400 }
+        ],
+        food: ["Croissants 🥐", "Escargots", "Coq au Vin"]
     },
     "New York": {
-        "spring": "Light jacket, T-shirt, jeans, comfortable shoes.",
-        "summer": "Shorts, tank top, sunscreen, comfortable shoes.",
-        "autumn": "Sweater, jeans, light jacket, scarf.",
-        "winter": "Heavy coat, gloves, boots, scarf."
+        activities: [
+            { name: "Statue of Liberty", cost: 25 },
+            { name: "Central Park", cost: 0 },
+            { name: "Broadway Show", cost: 100 }
+        ],
+        accommodations: [
+            { name: "Budget Hostel", costPerNight: 50 },
+            { name: "Mid-range Hotel", costPerNight: 150 },
+            { name: "Luxury Hotel", costPerNight: 350 }
+        ],
+        food: ["Bagels 🥯", "Cheesecake 🍰", "Hot Dogs 🌭"]
     },
     "Tokyo": {
-        "spring": "Light jacket, T-shirt, jeans, comfortable shoes.",
-        "summer": "Shorts, tank top, sunscreen, comfortable shoes.",
-        "autumn": "Layered clothing, sweater, scarf.",
-        "winter": "Warm coat, boots, gloves, scarf."
+        activities: [
+            { name: "Shibuya Crossing Walk", cost: 0 },
+            { name: "Tokyo Tower Visit", cost: 20 },
+            { name: "Akihabara Shopping", cost: 50 }
+        ],
+        accommodations: [
+            { name: "Capsule Hotel", costPerNight: 50 },
+            { name: "Business Hotel", costPerNight: 120 },
+            { name: "Luxury Ryokan", costPerNight: 300 }
+        ],
+        food: ["Sushi 🍣", "Ramen 🍜", "Takoyaki 🐙"]
     },
     "London": {
-        "spring": "Light jacket, scarf, comfortable shoes.",
-        "summer": "T-shirt, shorts, comfortable shoes, umbrella.",
-        "autumn": "Layered clothing, sweater, scarf.",
-        "winter": "Heavy coat, gloves, boots."
+        activities: [
+            { name: "London Eye", cost: 30 },
+            { name: "Tower of London", cost: 25 },
+            { name: "Thames River Cruise", cost: 40 }
+        ],
+        accommodations: [
+            { name: "Budget Hostel", costPerNight: 60 },
+            { name: "Mid-range Hotel", costPerNight: 150 },
+            { name: "Luxury Suite", costPerNight: 400 }
+        ],
+        food: ["Fish & Chips 🐟🍟", "English Breakfast 🍳", "Afternoon Tea ☕"]
     },
     "Rome": {
-        "spring": "Light jacket, T-shirt, jeans, comfortable shoes.",
-        "summer": "Light dress, shorts, sunscreen, comfortable shoes.",
-        "autumn": "Sweater, scarf, light jacket.",
-        "winter": "Warm coat, gloves, boots."
+        activities: [
+            { name: "Colosseum Tour", cost: 30 },
+            { name: "Vatican Museums", cost: 25 },
+            { name: "Trevi Fountain Visit", cost: 0 }
+        ],
+        accommodations: [
+            { name: "Guesthouse", costPerNight: 80 },
+            { name: "Boutique Hotel", costPerNight: 180 },
+            { name: "Luxury Resort", costPerNight: 350 }
+        ],
+        food: ["Pizza 🍕", "Pasta Carbonara 🍝", "Gelato 🍨"]
     },
     "Sydney": {
-        "spring": "Light jacket, T-shirt, jeans, comfortable shoes.",
-        "summer": "Shorts, tank top, sunscreen, comfortable shoes.",
-        "autumn": "Layered clothing, sweater, scarf.",
-        "winter": "Warm coat, gloves, boots."
+        activities: [
+            { name: "Sydney Opera House Tour", cost: 40 },
+            { name: "Bondi Beach", cost: 0 },
+            { name: "Harbour Bridge Climb", cost: 100 }
+        ],
+        accommodations: [
+            { name: "Backpacker Hostel", costPerNight: 70 },
+            { name: "Mid-range Hotel", costPerNight: 160 },
+            { name: "Luxury Waterfront Hotel", costPerNight: 400 }
+        ],
+        food: ["Barramundi Fish 🐟", "Meat Pie 🥧", "Lamington Cake 🍰"]
     },
     "Dubai": {
-        "spring": "Light dress or shirt, shorts, sunglasses, sunscreen.",
-        "summer": "Sunscreen, light dress, shorts, comfortable shoes.",
-        "autumn": "Layered clothing, T-shirt, comfortable shoes.",
-        "winter": "Light jacket, scarf, comfortable shoes."
+        activities: [
+            { name: "Burj Khalifa", cost: 40 },
+            { name: "Desert Safari", cost: 80 },
+            { name: "Dubai Mall & Fountain Show", cost: 0 }
+        ],
+        accommodations: [
+            { name: "Budget Apartment", costPerNight: 90 },
+            { name: "4-Star Hotel", costPerNight: 200 },
+            { name: "Luxury Resort", costPerNight: 500 }
+        ],
+        food: ["Shawarma 🌯", "Luqaimat 🍩", "Camel Milk Ice Cream 🍦"]
     }
 };
 
-function setMinEndDate() {
-    const startDate = document.getElementById('start-date').value;
-    document.getElementById('end-date').min = startDate;
-}
 
+
+// Generate Itinerary
 function generateItinerary() {
-    const destinationSelect = document.getElementById('destination');
-    const selectedDestination = destinationSelect.value;
+    const selectedDestination = document.getElementById('destination').value;
     const budget = parseFloat(document.getElementById('budget').value);
     const startDate = document.getElementById('start-date').value;
     const endDate = document.getElementById('end-date').value;
-    const loadingText = document.getElementById('loading-text');
-    const itineraryView = document.getElementById('itinerary-view');
-    const clothingSuggestionView = document.getElementById('clothing-suggestion');
 
     if (!selectedDestination || isNaN(budget) || budget <= 0 || !startDate || !endDate) {
-        alert("Please enter valid details.");
+        alert("Please enter all details correctly.");
         return;
     }
 
-    loadingText.style.display = "block";
+    const data = destinationData[selectedDestination];
+    if (!data) {
+        alert("Sorry, no data for this destination.");
+        return;
+    }
 
-    setTimeout(() => {
-        loadingText.style.display = "none";
-        itineraryView.style.display = "block";
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    const days = Math.floor((end - start) / (1000 * 60 * 60 * 24)) + 1;
 
-        // Calculate the number of days
-        const days = Math.floor((new Date(endDate) - new Date(startDate)) / (1000 * 60 * 60 * 24)) + 1; // Including both start and end dates
-        
-        // Generate the itinerary content
-        const itinerarySummary = `
-            <h3>Destination: ${selectedDestination}</h3>
-            <h4>Dates: ${startDate} to ${endDate} (Total Days: ${days})</h4>
-            <h4>Suggested Itinerary:</h4>
-            <ul>
-                <li>Day 1: Arrive and check into your accommodation</li>
-                ${Array.from({ length: days - 1 }, (_, index) => {
-                    return `<li>Day ${index + 2}: Explore ${selectedDestination} - Activity/Attraction</li>`;
-                }).join('')}
-            </ul>
-        `;
+    let activities = data.activities.filter(activity => activity.cost <= budget);
+    let accommodations = data.accommodations.filter(acc => acc.costPerNight <= budget / 3);
+    let foodOptions = data.food || [];
 
-        // Show clothing suggestions based on the selected destination and season
-        const clothingSuggestion = clothingSuggestions[selectedDestination]["winter"]; // Default to winter
-        clothingSuggestionView.innerHTML = `<p>For your trip to ${selectedDestination} in winter, we suggest: ${clothingSuggestion}</p>`;
+    let itinerarySummary = `
+        <h3>Destination: ${selectedDestination}</h3>
+        <h4>Dates: ${startDate} to ${endDate} (Total Days: ${days})</h4>
+        <h4>Activities:</h4>
+        <ul>${activities.map(activity => `<li>${activity.name} - $${activity.cost}</li>`).join('')}</ul>
+        <h4>Accommodation Options:</h4>
+        <ul>${accommodations.map(acc => `<li>${acc.name} - $${acc.costPerNight} per night</li>`).join('')}</ul>
+        <h4>Must-Try Foods 🍽:</h4>
+        <ul>${foodOptions.map(food => `<li>${food}</li>`).join('')}</ul>
+    `;
 
-        document.getElementById('itinerary-summary').innerHTML = itinerarySummary;
-    }, 1500);
+    document.getElementById('itinerary-summary').innerHTML = itinerarySummary;
+
+    // Fetch Weather Data
+    fetchWeather(selectedDestination);
 }
 
-
+// Fetch Weather and Update UI
+function fetchWeather(city) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
+        .then(response => response.json())
+        .then(data => {
+            let weatherSummary = `
+                <h4>🌤 Weather Forecast:</h4>
+                <p>Temperature: ${data.main.temp}°C</p>
+                <p>Weather: ${data.weather[0].description}</p>
+            `;
+            document.getElementById('itinerary-summary').innerHTML += weatherSummary;
+        })
+        .catch(error => console.log("Error fetching weather:", error));
+}
 
 
 function exportItinerary() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // Get only the content we need from the itinerary summary and clothing suggestion
-    const itineraryContent = document.getElementById('itinerary-summary').innerText;
-    const clothingContent = document.getElementById('clothing-suggestion').innerText;
+    let itineraryContent = document.getElementById("itinerary-summary").innerHTML;
 
-    // Set title for the PDF
-    doc.setFont("helvetica", "bold");
-    doc.text("Travel Itinerary", 10, 10);
+    if (!itineraryContent.trim()) {
+        alert("No itinerary available. Please generate an itinerary first!");
+        return;
+    }
 
-    // Add itinerary content with some space after it
-    doc.setFont("helvetica", "normal");
-    const itineraryYPosition = 20;
-    doc.text(itineraryContent, 10, itineraryYPosition);
+    // Remove HTML tags and format text
+    let formattedText = itineraryContent
+        .replace(/<h3>/g, "\n")
+        .replace(/<\/h3>/g, "\n")
+        .replace(/<h4>/g, "\n")
+        .replace(/<\/h4>/g, "\n")
+        .replace(/<ul>/g, "")
+        .replace(/<\/ul>/g, "")
+        .replace(/<li>/g, "- ")
+        .replace(/<\/li>/g, "\n")
+        .replace(/<\/?[^>]+(>|$)/g, ""); // Remove all remaining HTML tags
 
-    // Add space between itinerary and clothing suggestions
-    const spaceBetween = 60; // Adjust as needed
-    const clothingYPosition = itineraryYPosition + spaceBetween;
+    doc.text("AI Travel Itinerary", 10, 10);
+    doc.text(formattedText, 10, 20, { maxWidth: 180 });
 
-    // Add clothing suggestions after the itinerary with enough space
-    doc.text(clothingContent, 10, clothingYPosition);
-
-    // Save the PDF
-    doc.save('itinerary.pdf');
+    doc.save("travel_itinerary.pdf");
 }
-
