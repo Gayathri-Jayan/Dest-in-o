@@ -50,14 +50,8 @@ For Software:
 
 ![Uploading Screenshot (203).png…]()
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot (204)](https://github.com/user-attachments/assets/66bf1bc5-5494-4772-afbd-5305eaf7eb74)
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
