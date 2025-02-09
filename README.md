@@ -80,9 +80,9 @@ Accommodation & Food Recommendations: Lists hotels and eateries based on destina
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- Ayisha Saniya: [Specific contributions]
-- Drushya Jolly: [Specific contributions]
-- Gayathri Jayan: [Specific contributions]
+- Ayisha Saniya:  UI Design & Layout
+- Drushya Jolly: Itinerary Generator & Content Display
+- Gayathri Jayan: Responsiveness & UI Enhancements
 
 ---
 Made with ❤️ at TinkerHub
