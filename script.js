@@ -1,4 +1,5 @@
-const API_KEY = "your_openweathermap_api_key"; // Replace with a real API key
+ 
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("destination").addEventListener("change", updateTheme);
@@ -62,8 +63,7 @@ const destinationData = {
             { name: "Mid-range Hotel", costPerNight: 200 },
             { name: "Luxury Hotel", costPerNight: 400 }
         ],
-        food: ["Croissants 🥐", "Escargots", "Coq au Vin"],
-        outfitSuggestions: "Chic & casual - Stylish coat, boots, scarf, and neutral colors."
+        food: ["Croissants 🥐", "Escargots", "Coq au Vin"]
     },
     "New York": {
         activities: [
@@ -76,81 +76,78 @@ const destinationData = {
             { name: "Mid-range Hotel", costPerNight: 150 },
             { name: "Luxury Hotel", costPerNight: 350 }
         ],
-        food: ["Bagels 🥯", "Cheesecake 🍰", "Hot Dogs 🌭"],
-        outfitSuggestions: "Layered outfits - Sneakers, a stylish jacket, and comfortable jeans."
+        food: ["Bagels 🥯", "Cheesecake 🍰", "Hot Dogs 🌭"]
     },
     "Tokyo": {
         activities: [
-            { name: "Shibuya Crossing", cost: 0 },
-            { name: "Tokyo Tower", cost: 20 },
-            { name: "Sensoji Temple", cost: 0 }
+            { name: "Shibuya Crossing Walk", cost: 0 },
+            { name: "Tokyo Tower Visit", cost: 20 },
+            { name: "Akihabara Shopping", cost: 50 }
         ],
         accommodations: [
-            { name: "Budget Capsule Hotel", costPerNight: 60 },
-            { name: "Mid-range Hotel", costPerNight: 150 },
-            { name: "Luxury Hotel", costPerNight: 400 }
+            { name: "Capsule Hotel", costPerNight: 50 },
+            { name: "Business Hotel", costPerNight: 120 },
+            { name: "Luxury Ryokan", costPerNight: 300 }
         ],
-        food: ["Sushi 🍣", "Ramen 🍜", "Takoyaki 🐙"],
-        outfitSuggestions: "Trendy & comfy - Sneakers, oversized sweater, stylish tote bag."
+        food: ["Sushi 🍣", "Ramen 🍜", "Takoyaki 🐙"]
     },
     "London": {
         activities: [
-            { name: "Big Ben", cost: 0 },
-            { name: "London Eye", cost: 35 },
-            { name: "British Museum", cost: 0 }
+            { name: "London Eye", cost: 30 },
+            { name: "Tower of London", cost: 25 },
+            { name: "Thames River Cruise", cost: 40 }
         ],
         accommodations: [
-            { name: "Budget Inn", costPerNight: 80 },
-            { name: "Mid-range Hotel", costPerNight: 180 },
-            { name: "Luxury Hotel", costPerNight: 400 }
+            { name: "Budget Hostel", costPerNight: 60 },
+            { name: "Mid-range Hotel", costPerNight: 150 },
+            { name: "Luxury Suite", costPerNight: 400 }
         ],
-        food: ["Fish & Chips 🐟🍟", "Full English Breakfast 🍳", "Afternoon Tea ☕"],
-        outfitSuggestions: "Smart casual - Trench coat, boots, umbrella for rainy weather."
+        food: ["Fish & Chips 🐟🍟", "English Breakfast 🍳", "Afternoon Tea ☕"]
     },
     "Rome": {
         activities: [
-            { name: "Colosseum Tour", cost: 25 },
-            { name: "Vatican Museums", cost: 30 },
-            { name: "Trevi Fountain", cost: 0 }
+            { name: "Colosseum Tour", cost: 30 },
+            { name: "Vatican Museums", cost: 25 },
+            { name: "Trevi Fountain Visit", cost: 0 }
         ],
         accommodations: [
-            { name: "Budget Hostel", costPerNight: 70 },
-            { name: "Mid-range Hotel", costPerNight: 170 },
-            { name: "Luxury Hotel", costPerNight: 350 }
+            { name: "Guesthouse", costPerNight: 80 },
+            { name: "Boutique Hotel", costPerNight: 180 },
+            { name: "Luxury Resort", costPerNight: 350 }
         ],
-        food: ["Pasta 🍝", "Pizza 🍕", "Gelato 🍦"],
-        outfitSuggestions: "Elegant & airy - Light dress, sunglasses, comfy sandals."
+        food: ["Pizza 🍕", "Pasta Carbonara 🍝", "Gelato 🍨"]
     },
     "Sydney": {
         activities: [
-            { name: "Sydney Opera House", cost: 40 },
+            { name: "Sydney Opera House Tour", cost: 40 },
             { name: "Bondi Beach", cost: 0 },
-            { name: "Blue Mountains Tour", cost: 60 }
+            { name: "Harbour Bridge Climb", cost: 100 }
         ],
         accommodations: [
-            { name: "Backpacker Hostel", costPerNight: 50 },
-            { name: "Mid-range Hotel", costPerNight: 180 },
-            { name: "Luxury Hotel", costPerNight: 400 }
+            { name: "Backpacker Hostel", costPerNight: 70 },
+            { name: "Mid-range Hotel", costPerNight: 160 },
+            { name: "Luxury Waterfront Hotel", costPerNight: 400 }
         ],
-        food: ["Vegemite Toast 🥪", "Seafood Platter 🦐", "Tim Tams 🍫"],
-        outfitSuggestions: "Beachy vibes - Shorts, tank tops, sunglasses, flip-flops."
+        food: ["Barramundi Fish 🐟", "Meat Pie 🥧", "Lamington Cake 🍰"]
     },
     "Dubai": {
         activities: [
-            { name: "Burj Khalifa Visit", cost: 40 },
-            { name: "Desert Safari", cost: 70 },
-            { name: "Dubai Mall", cost: 0 }
+            { name: "Burj Khalifa", cost: 40 },
+            { name: "Desert Safari", cost: 80 },
+            { name: "Dubai Mall & Fountain Show", cost: 0 }
         ],
         accommodations: [
             { name: "Budget Apartment", costPerNight: 90 },
-            { name: "Mid-range Hotel", costPerNight: 200 },
-            { name: "Luxury Hotel", costPerNight: 500 }
+            { name: "4-Star Hotel", costPerNight: 200 },
+            { name: "Luxury Resort", costPerNight: 500 }
         ],
-        food: ["Shawarma 🌯", "Luqaimat 🍯", "Arabic Coffee ☕"],
-        outfitSuggestions: "Modest yet stylish - Light fabrics, long dresses, sunglasses."
+        food: ["Shawarma 🌯", "Luqaimat 🍩", "Camel Milk Ice Cream 🍦"]
     }
 };
 
+
+
+// Generate Itinerary
 function generateItinerary() {
     const selectedDestination = document.getElementById('destination').value;
     const budget = parseFloat(document.getElementById('budget').value);
@@ -175,19 +172,16 @@ function generateItinerary() {
     let activities = data.activities.filter(activity => activity.cost <= budget);
     let accommodations = data.accommodations.filter(acc => acc.costPerNight <= budget / 3);
     let foodOptions = data.food || [];
-    let outfit = data.outfitSuggestions || "No outfit suggestion available.";
 
     let itinerarySummary = `
         <h3>Destination: ${selectedDestination}</h3>
         <h4>Dates: ${startDate} to ${endDate} (Total Days: ${days})</h4>
         <h4>Activities:</h4>
-        <ul>${activities.map(activity => <li>${activity.name} - $${activity.cost}</li>).join('')}</ul>
+        <ul>${activities.map(activity => `<li>${activity.name} - $${activity.cost}</li>`).join('')}</ul>
         <h4>Accommodation Options:</h4>
-        <ul>${accommodations.map(acc => <li>${acc.name} - $${acc.costPerNight} per night</li>).join('')}</ul>
+        <ul>${accommodations.map(acc => `<li>${acc.name} - $${acc.costPerNight} per night</li>`).join('')}</ul>
         <h4>Must-Try Foods 🍽:</h4>
-        <ul>${foodOptions.map(food => <li>${food}</li>).join('')}</ul>
-        <h4>👗 Outfit Suggestions:</h4>
-        <p>${outfit}</p>
+        <ul>${foodOptions.map(food => `<li>${food}</li>`).join('')}</ul>
     `;
 
     document.getElementById('itinerary-summary').innerHTML = itinerarySummary;
@@ -196,12 +190,9 @@ function generateItinerary() {
     fetchWeather(selectedDestination);
 }
 
-
-
-
 // Fetch Weather and Update UI
 function fetchWeather(city) {
-    fetch(https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
         .then(response => response.json())
         .then(data => {
             let weatherSummary = `
