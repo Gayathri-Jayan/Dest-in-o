@@ -11,7 +11,7 @@
 - Member 3: Gayathri Jayan - SCMS College Of Engineering And Technology,Karukutty
 
 ### Hosted Project Link
-[mention your project hosted project link here]
+https://heartfelt-kulfi-6cbb16.netlify.app/
 
 ### Project Description
 The Travel Itinerary Planner is an interactive web application that helps users create customized travel itineraries based on their chosen destination, travel dates. It suggests popular attractions, accomodation and must try food spots to enhance the travel experience.
