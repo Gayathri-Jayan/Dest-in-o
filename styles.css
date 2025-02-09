@@ -1,70 +1,110 @@
+/* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: url('https://source.unsplash.com/1600x900/?travel') no-repeat center center fixed;
+    background-size: cover;
+    transition: background 0.5s ease-in-out;
+    color: #fff;
     text-align: center;
-    background: #f4f4f4;
     padding: 20px;
+    margin: 0;
 }
 
+/* Header Styling */
 header {
-    background: #007bff;
-    color: white;
-    padding: 10px;
-    font-size: 24px;
-    border-radius: 8px;
-}
-
-.form-container {
-    background: white;
-    padding: 20px;
-    width: 50%;
-    margin: 20px auto;
+    padding: 15px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 2em;
+    transition: background-color 0.5s ease-in-out;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-input, select, button {
-    margin: 10px;
+/* Form Container */
+.form-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 450px;
+    margin: auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.form-container h2 {
+    margin-bottom: 10px;
+    color: #f4b25c;
+}
+
+/* Form Inputs & Select */
+input, select {
+    width: 100%;
     padding: 10px;
-    width: 80%;
-    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
 }
 
+select {
+    cursor: pointer;
+}
+
+/* Buttons */
 button {
-    background: #007bff;
-    color: white;
+    background-color: #f4b25c;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background: #0056b3;
+    background-color: #f3a659;
+    transform: scale(1.05);
 }
 
+/* Itinerary View */
 #itinerary-view {
-    background: white;
+    background: #f3a6599e;
     padding: 20px;
-    width: 50%;
+    border-radius: 12px;
+    max-width: 600px;
     margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    display: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.loading {
-    display: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #007bff;
+#itinerary-view h2 {
+    color: #ffcc00;
 }
 
-/* Same styles as before */
-#clothing-suggestion {
-    background: #f9f9f9;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    color: #333;
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container, #itinerary-view {
+        max-width: 90%;
+    }
+
+    header {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: 100%;
+    }
 }
